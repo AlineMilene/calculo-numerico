@@ -26,7 +26,6 @@ plot(listaDeValoresDeX, listaDeValoresDeG)
 abline(v = 0, h = 0)
 
 
-
 # Exercicio 3
 # Definir a função e sua derivada
 g = function(x) { 105 * ((120 * x * x * x) - (240 * x * x) + 144 * x - 24) }
@@ -247,5 +246,5 @@ for (k in 3:9) {
   }
 }
 
-print(results) 
+print(results)
 

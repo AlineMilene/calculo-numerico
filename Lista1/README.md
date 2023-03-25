@@ -407,3 +407,25 @@ Retornamos a matriz “A “transformada, o valor de “y “que é o vetor inde
 - Para (k=3) **exercicio_3_2(3)** 
 - Para (k=4) **exercicio_3_2(4)** 
 
+
+# Exercício 3
+Replicamos o exercício 3.1 e 3.2 e inserimos os valores de “x” em uma lista para ser usado (lista_x). E então, começamos definindo os valores das variáveis.
+- O valor de “k” vem do loop “principal”
+- Como veremos B4 então o valor de “j” precisa ser igual a 2, pois 2*j = 4, então j=2. 
+
+Realizamos o cálculo de “m” e “h” com as fórmulas ofertadas, e para B4 precisamos de “y4”, que está na segunda posição na lista com os valores de “x” encontrados no exercício 3.2. Então acessamos a segunda posição dessa lista.
+
+Encontramos o fatorial do número 4 a partir da função fatorial definida na parte 1, e com “y4” e fatorial de 4 conseguimos realizar o cálculo da parte superior da equação (13). Também, realizamos o cálculo de “h” elevado a 4 (2*j). Realizamos o cálculo da derivada terceira (terceira pois 2j-1 para j=2 é 3) de “f” para “a” e para “b”. A derivada foi feita a partir da regra do tombo. Realizamos a diferença do valor encontrado das derivadas para “a” e “b”. Com o valor de “h” elevado a 4 e a diferença da derivada de “a” e “b”, encontramos o valor da parte inferior da equação (13). Por fim, fizemos a divisão entres as partes superior e inferior, encontrando o valor de B4.
+
+Portanto, encontramos os seguintes valores para k e B4:
+|  k  |           B4          |
+| :-: | :-------------------: |
+|  3  | 0.07945601851851936   | 
+|  4  | 0.007961757502480469  | 
+|  5  | 0.0010668345399853525 | 
+|  6  | 0.0001659954921712167 | 
+|  7  | 2.8297836713716315e-05|
+|  8  | 5.131143162576506e-06 |
+|  9  | 9.727937120960786e-07 |
+
+Ou seja, a conclusão é que com o aumento de k, o número B4 de Bernoulli se torna ainda mais impreciso e menor perdendo em média de 1 casa de precisão.
