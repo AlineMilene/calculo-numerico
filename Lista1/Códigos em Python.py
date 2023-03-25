@@ -5,48 +5,49 @@
 # PARA K IGUAL AO DO EXEMPLO - K=3 e y = np.array([[1], [1], [1]])
 import math
 import numpy as np
-k = 3
-r = k*2
-c = 0
-lista = []
-for l in range(0, k):
-    x = 2**l
-    for j in range(2, r + 2, 2):
-        y = x ** j
-        lista.append(y)
 
-matriz = np.array(lista).reshape((k, k))
 
-# eliminacao de gauss
-A = matriz
-#     y = matriz = np.array(lista_e).reshape(len(lista_e), 1)
-y = np.array([[1], [1], [1]])
-x = np.zeros_like(y)
-m = k
+def exercicio_3_2_com_k_fixo_em_3():
+    k = 3
+    r = k*2
+    lista = []
+    for l in range(0, k):
+        x = 2**l
+        for j in range(2, r + 2, 2):
+            y = x ** j
+            lista.append(y)
 
-for j in range(m-1):
-    if A[j][j] == 0:
-        for k in range(j+1, m-1):
-            if A[k][j] != 0:
-                A[j], A[k] = A[k], A[j]
-            else:
-                print("A matriz é singular.")
+    matriz = np.array(lista).reshape((k, k))
 
-    for i in range(j+1, m):
-        mi = (A[i][j] / A[j][j]) * (-1)
-        for k in range(j, m):
-            A[i][k] += mi * A[j][k]
-        y[i] += int(mi) * int(y[j])
+    # eliminacao de gauss
+    A = matriz
+    y = np.array([[1], [1], [1]])
+    x = np.zeros_like(y)
+    m = k
 
-    # retroativo
-    for i in range(m-1, -1, -1):
-        x[i] = y[i]
-        for j in range(i+1, m):
-            x[i] = x[i] - (A[i][j] * x[j])
-        x[i] = x[i] / A[i][i]
-print(A)
-print(y)
-print(x)
+    for j in range(m-1):
+        if A[j][j] == 0:
+            for k in range(j+1, m-1):
+                if A[k][j] != 0:
+                    A[j], A[k] = A[k], A[j]
+                else:
+                    print("A matriz é singular.")
+
+        for i in range(j+1, m):
+            mi = (A[i][j] / A[j][j]) * (-1)
+            for k in range(j, m):
+                A[i][k] += mi * A[j][k]
+            y[i] += int(mi) * int(y[j])
+
+        # retroativo
+        for i in range(m-1, -1, -1):
+            x[i] = y[i]
+            for j in range(i+1, m):
+                x[i] = x[i] - (A[i][j] * x[j])
+            x[i] = x[i] / A[i][i]
+    print(A)
+    print(y)
+    print(x)
 
 
 # PARA UM K DINÂMICO E COM Y DEPENDENDO DO ERRO DO EXERCICIO 3.1
@@ -56,7 +57,6 @@ s = 5
 
 
 def exercicio_3_2(k):
-    tmp = k
     # PRIMEIRA PARTE - ENCONTRAR E - ERRO
     # calcula o valor maximo de h
     h_max = 2**(k-1)
@@ -71,6 +71,7 @@ def exercicio_3_2(k):
         i *= 2
 
     lista_e = []
+
     # calcula T
     for l in lista_l:
         m = s * (2**(k-1-l))
@@ -104,7 +105,6 @@ def exercicio_3_2(k):
     # SEGUNDA PARTE - RESOLVENDO O SISTEMA
     # montando a matriz
     r = k*2
-    c = 0
     lista = []
     for l in range(0, k):
         x = 2**l

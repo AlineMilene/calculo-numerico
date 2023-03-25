@@ -360,5 +360,41 @@ for (k in 3:9) {
 
 Os resultados podem ser exibidos em uma tabela, executando o código: **print(results)** 
 
+## Exercício 2
+Dividimos o exercício 3.2 em duas partes. A primeira resolve o exemplo do exercício e a segunda parte está genérico, isto é, para um valor de k dinâmico e com y dependendo do valor do erro do exercício 3.1.
 
+### Parte 1
+Iniciamos com a criação da matriz. Foi criada uma lógica que cria a matriz a partir do valor de “k”. Com a matriz criada, seguimos para a definição das variáveis. 
+- A variável “A” é definida como a matriz criada anteriormente
+- “y” é a matriz dada no exemplo
+- “x” é uma matriz que queremos encontrar, que tem a mesma forma que y, mas preenchida com zeros, pois seus valores serão alterados ao longo do exercício.
+
+Os próximos passos seguem o tutorial da sessão 2.4, conforme orientado no exercício.
+
+Dado a função implementada
+```
+def exercicio_3_2_com_k_fixo_em_3():
+  ** o código completo se encontra no arquivo .py ** 
+```
+
+Os resultados são exibidos chamando a função via: **exercicio_3_2_com_k_fixo_em_3()** 
+
+### Parte 2
+
+Já nesta parte, replicamos o exercício 3.1 e inserimos os valores dos erros em uma lista para ser usado futuramente. Para isso, iniciamos com a criação da matriz, e a criação uma lógica que cria a matriz a partir do valor de “k”. Com a matriz criada, seguimos para a definição das variáveis. 
+- A variável “A” é definida como a matriz criada anteriormente
+- “y” é a matriz dos valores dos erros criada a partir da lista gerada pelo resultado do exercício 3.1
+- “x” é uma matriz que queremos encontrar, que tem a mesma forma que y, mas preenchida com zeros, pois seus valores serão alterados ao longo do exercício
+
+Os próximos passos seguem o tutorial da sessão 2.4, conforme orientado no exercício:
+
+Dado a função implementada
+```
+def exercicio_3_2(k):
+  ** o código completo se encontra no arquivo .py ** 
+```
+
+Retornamos a matriz “A “transformada, o valor de “y “que é o vetor independente transformado e o valor de “x”. Os resultados são exibidos chamando a função e fornecendo um k, por exemplo: 
+- Para (k=3) **exercicio_3_2(3)** 
+- Para (k=4) **exercicio_3_2(4)** 
 
