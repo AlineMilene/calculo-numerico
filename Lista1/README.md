@@ -321,3 +321,44 @@ Exibindo as aproximações geradas por cada método:
 |  33     |         0         | 0.364116086448083 |         0         |              0        |
 |  34     |         0         | 0.364116086448083 |         0         |              0        |
 |  35     |         0         | 0.364116086448083 |         0         |              0        |
+
+---
+
+# Tarefa 3
+
+## Exercício 1
+Primeiro foi fixado o valor das variáveis
+```
+a <- 0
+b <- 1
+s <- 5
+results <- data.frame(k = integer(), h = numeric(), T = numeric(), E = numeric())
+```
+
+Adicionado um loop “principal”, ou seja, um laço, para passar pelos valores de “k” no intervalo de 3 a 9 e dentro dele:
+- Foi calculado o valor de “h” máximo que depende da variável “k”;
+- Com o valor máximo de “h” foi feito o cálculo para encontrar o valor de “l”, que será usado no valor de “m”;
+
+Para encontrar o valor de “T” calculamos o valor de “m” e de “h”
+
+- Criamos um loop para realizar a parte de somatório da equação (1). Calculando “xi” e “fxi”. Os valores de “fxi” foram adicionados em uma lista para realizar a soma;
+- Realizamos a parte da equação (1) que calcula “fxo” e “fxm”;
+- E por fim, podemos encontrar “T” pegando o resultado dos passos anteriores e multiplicamos por “h”;
+
+Para o cálculo do erro precisamos do valor de “T” e do valor da integral da função:
+- Primeiro calculamos o valor da integral substituindo pelo intervalo “a” e ”b” (no cálculo da integral utilizamos a regra da potência)
+- Finalmente para encontrar o erro “E” fizemos a subtração de “T” e da integral encontrada. E printamos os valores encontrados.
+
+Dado a função implementada
+```
+for (k in 3:9) {
+  ** o código completo se encontra no arquivo .R ** 
+  results <- rbind(results, data.frame(k = k, h = 2 ^ (-l), T = t, E = e))
+}
+
+```
+
+Os resultados podem ser exibidos em uma tabela, executando o código: **print(results)** 
+
+
+
