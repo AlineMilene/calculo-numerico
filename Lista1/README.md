@@ -8,9 +8,9 @@
 ## Exercício 1
 
 Após calcular as derivadas à mão, obtemos os seguintes polinômios:
-- $g(x) = 105 * ((120 * x * x * x) - (240 * x * x) + 144 * x - 24)$
-- $dG(x) = 105 * ((360 * x * x) - (480 * x) + 144)$
-- $ddG(x) = 105 * (720 * x - 480)$
+- $g(x) = 105 * ((120x^3) - (240x^2) + 144x - 24)$
+- $dG(x) = 105 * ((360x^2) - (480x) + 144)$
+- $ddG(x) = 105 * (720x - 480)$
 
 Depois disso, é realizado o loop de cálculos da sequência de x = 0.0, 0.1, 0.2 ... 0.9, 1.0
 ```
@@ -75,8 +75,8 @@ E montamos uma tabela
 ## Exercício 3
 
 Definir a função 'g' e sua derivada
-- $g(x) = 105 * ((120 * x * x * x) - (240 * x * x) + 144 * x - 24)$
-- $dG(x) = 105 * ((360 * x * x) - (480 * x) + 144)$
+- $g(x) = 105 * ((120x^3) - (240x^2) + 144x - 24)$
+- $dG(x) = 105 * ((360x^2) - (480x) + 144)$
 
 E também as condições iniciais
 ```
@@ -156,6 +156,15 @@ Tm_retorno <- function(f, a, b, m) {
   return(Tm)
 }
 ```
+
+Setando as condições iniciais
+f = function(x) { 105 * x ^ 2 * (1 - x) ^ 4 }
+a = 1
+b = 0
+m = 41834
+
+E chamando a função, obtemos Tm
+Tm_retorno(f, a, b, m)
 
 **Conclusão:** e obter $Tm = 0.99999999999999988898$, ou seja, com 15 casas de precisão. 
 
